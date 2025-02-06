@@ -31,7 +31,7 @@ const App = () => {
   }, [timer])
 
   function generateMainColor() {
-    // Generate a random color in HSL format
+    // Gen a random color in HSL format
     const hue = random(360); // Hue: 0-360 (defines the color family)
     const saturation = 70; // Fixed saturation (for consistency)
     const lightness = 50; // Mid-range lightness
@@ -44,7 +44,7 @@ const App = () => {
     let [hue, saturation, lightness] = baseColor.match(/\d+/g).map(Number);
 
     // Define a range of lightness values for different shades
-    const lightnessValues = [30, 40, 50, 60, 70, 80]; // Shades 300, 500, 700, etc.
+    const lightnessValues = [30, 40, 50, 60, 70, 80]; 
 
     lightnessValues.forEach(l => {
       shades.push(`hsl(${hue}, ${saturation}%, ${l}%)`);
