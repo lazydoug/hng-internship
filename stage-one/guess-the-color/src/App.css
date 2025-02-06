@@ -32,8 +32,16 @@ body {
   padding: 0;
 }
 
-dialog::backdrop {
-  backdrop-filter: brightness(20%);
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .container {
@@ -76,9 +84,14 @@ dialog::backdrop {
 
 .rules-modal,
 .game-over-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: white;
   padding: 20px;
   border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .rules-modal button,
@@ -94,16 +107,4 @@ dialog::backdrop {
 
 .info-icon:hover {
   cursor: pointer;
-}
-
-@keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
