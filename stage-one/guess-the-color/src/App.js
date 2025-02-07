@@ -4,7 +4,7 @@ import './App.css'
 const App = () => {
   const [targetColor, setTargetColor] = useState('')
   const [colorOptions, setColorOptions] = useState([])
-  const [score, setScore] = useState(10)
+  const [score, setScore] = useState(0)
   const [highestScore, setHighestScore] = useState(() => {
     return parseInt(localStorage.getItem('highestScore')) || 0
   })
